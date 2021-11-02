@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://AWS-project:l1vNW5YWqarZ2AHz@aws-cluster.inmdu.mongodb.net/Contacts?retryWrites=true&w=majority"
+}

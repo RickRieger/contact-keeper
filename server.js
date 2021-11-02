@@ -2,8 +2,16 @@
 // -React uses es6 modules which allows the syntax 'import' to bring in modules.
 const express = require('express');
 
+const connectDB = require('./config/db');
+
 // Initialize express into a variable called 'app'
 const app = express();
+
+//connect to DB
+connectDB();
+
+// Init middleware
+app.use(express.json({ extended: false }));
 
 //give app the method 'get'
 app.get('/', (req, res) => res.json({ msg: 'Welcome to the contact api' }));
