@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       {' '}
-      <Fragment className='App'>
+      <Fragment>
         <Navbar />
         <div className='container'>
           <Switch>
