@@ -19,6 +19,7 @@ function addNewTodo(name) {
 
 export const Home = () => {
   const [todos, dispatch] = useReducer(reducer, []);
+
   const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
@@ -27,28 +28,23 @@ export const Home = () => {
     setName('');
   };
 
-  console.log(todos);
+  console.log(name);
 
   return (
     <div>
       <h1>Home</h1>
 
       <form
-        value={name}
         onChange={(e) => {
           setName(e.target.value);
         }}
         onSubmit={handleSubmit}
       >
-        <input></input>
+        <input type='text' value={name}></input>
       </form>
       <span>
         {todos.map((todo) => {
-          return (
-            <div>
-              {todo.complete ? 'hello' : 'bye'}, {todo.id}, {todo.complete}
-            </div>
-          );
+          return <div key={todo.id}>{todo.name}</div>;
         })}
       </span>
     </div>
